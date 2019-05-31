@@ -20,7 +20,7 @@ NERCorpus *NERCorpusGenerator::generate() {
         parseTree = treeBank->get(i);
         if (parseTree->layerAll(ViewLayerType::NER)){
             sentence = parseTree->generateAnnotatedSentence();
-            corpus->addSentence(sentence);
+            ((Corpus*) corpus)->addSentence(sentence);
         }
     }
     return corpus;
