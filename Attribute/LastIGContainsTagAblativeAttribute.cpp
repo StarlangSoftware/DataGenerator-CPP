@@ -4,6 +4,11 @@
 
 #include "LastIGContainsTagAblativeAttribute.h"
 
+/**
+ * Binary attribute for a given word. If the last inflectional group of the word contains ABLATIVE tag,
+ * the attribute will be "true", otherwise "false".
+ * @param parse Morphological parse of the word.
+ */
 LastIGContainsTagAblativeAttribute::LastIGContainsTagAblativeAttribute(MorphologicalParse parse) : LastIGContainsTagAttribute(move(parse), MorphologicalTag::ABLATIVE) {
 
 }

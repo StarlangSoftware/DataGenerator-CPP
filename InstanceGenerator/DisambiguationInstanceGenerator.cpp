@@ -5,6 +5,13 @@
 #include <AnnotatedWord.h>
 #include "DisambiguationInstanceGenerator.h"
 
+/**
+ * Generates a single classification instance of the morphological disambiguation problem for the given word of the
+ * given sentence. If the word does not have a morphological parse, the method throws InstanceNotGenerated.
+ * @param sentence Input sentence.
+ * @param wordIndex The index of the word in the sentence.
+ * @return Classification instance.
+ */
 Instance *DisambiguationInstanceGenerator::generateInstanceFromSentence(Sentence* sentence, int wordIndex) {
     Instance* current;
     AnnotatedWord* word;

@@ -4,6 +4,11 @@
 
 #include "LastIGContainsTagInstrumentalAttribute.h"
 
+/**
+ * Binary attribute for a given word. If the last inflectional group of the word contains INSTRUMENTAL tag,
+ * the attribute will be "true", otherwise "false".
+ * @param parse Morphological parse of the word.
+ */
 LastIGContainsTagInstrumentalAttribute::LastIGContainsTagInstrumentalAttribute(MorphologicalParse parse) : LastIGContainsTagAttribute(move(parse), MorphologicalTag::INSTRUMENTAL){
 
 }
