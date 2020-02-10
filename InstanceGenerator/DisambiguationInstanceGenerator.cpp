@@ -17,9 +17,9 @@ Instance *DisambiguationInstanceGenerator::generateInstanceFromSentence(Sentence
     AnnotatedWord* word;
     word = (AnnotatedWord*) sentence->getWord(wordIndex);
     current = new Instance(word->getParse()->getTransitionList());
-    for (int i = 1; i <= windowSize; i++){
-        if (wordIndex - windowSize >= 0){
-            addAttributesForPreviousWords(current, sentence, wordIndex - windowSize);
+    for (int i = 0; i < windowSize; i++){
+        if (wordIndex - windowSize + i >= 0){
+            addAttributesForPreviousWords(current, sentence, wordIndex - windowSize + i);
         } else {
             addAttributesForEmptyWords(current, "<s>");
         }
