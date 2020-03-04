@@ -1,4 +1,6 @@
 # DataGenerator
+You can also see either [Python](https://github.com/olcaytaner/DataGenerator-Py) 
+or [Java](https://github.com/olcaytaner/DataGenerator) repository.
 
 ## Tasks
 
