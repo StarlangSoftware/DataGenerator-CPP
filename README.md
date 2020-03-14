@@ -220,3 +220,36 @@ Result: The imported project is listed in the Project Explorer view and files ar
 **From IDE**
 
 After being done with the downloading and opening project, select **Build Project** option from **Build** menu.
+
+Detailed Description
+============
++ [AnnotatedDataSetGenerator](#annotateddatasetgenerator)
++ [InstanceGenerator](#instancegenerator)
+
+## AnnotatedDataSetGenerator
+
+DataSet yaratmak için AnnotatedDataSetGenerator sınıfı önce üretilir.
+
+	AnnotatedDataSetGenerator(String directory, String pattern, InstanceGenerator instanceGenerator)
+
+Ardından generate metodu ile DataSet yaratılır.
+
+	DataSet generate()
+
+## InstanceGenerator
+
+DataGeneratorlerin InstanceGeneratorlere ihtiyacı vardır. Bunlar bir tek kelimeden bir 
+Instance yaratan sınıflardır.
+
+	Instance generateInstanceFromSentence(Sentence sentence, int wordIndex)
+
+NER problemi için NerInstanceGenerator, FeaturedNerInstanceGenerator ve 
+VectorizedNerInstanceGeneratorsınıfı
+
+ShallowParse problemi için ShallowParseInstanceGenerator, 
+FeaturedShallowParseInstanceGenerator ve VectorizedShallowParseInstanceGenerator sınıfı
+
+WSD problemi için SemanticInstanceGenerator, FeaturedSemanticInstanceGenerator ve
+VectorizedSemanticInstanceGenerator sınıfı
+
+Morphological Disambiguation problemi için FeaturedDisambiguationInstanceGenerator sınıfı
