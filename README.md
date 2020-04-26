@@ -1,6 +1,8 @@
 # DataGenerator
-You can also see either [Python](https://github.com/olcaytaner/DataGenerator-Py) 
-or [Java](https://github.com/olcaytaner/DataGenerator) repository.
+
+For Developers
+============
+You can also see [Java](https://github.com/starlangsoftware/DataGenerator), [Python](https://github.com/starlangsoftware/DataGenerator-Py),  or [C#](https://github.com/starlangsoftware/DataGenerator-CS) repository.
 
 ## Tasks
 
