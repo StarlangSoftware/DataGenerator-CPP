@@ -8,6 +8,7 @@
 #include <vector>
 #include "Symbol.h"
 #include "SearchDirectionType.h"
+#include "ConstituentSpan.h"
 
 using namespace std;
 
@@ -45,7 +46,6 @@ private:
 protected:
     vector<ParseNode*> children;
     ParseNode* parent = nullptr;
-    int childIndex = -1;
     Symbol data = Symbol("");
 public:
     ParseNode() = default;
@@ -72,12 +72,15 @@ public:
     ParseNode* firstChild();
     ParseNode* lastChild();
     bool isLastChild(ParseNode* child);
+    int getChildIndex(ParseNode* child);
+    bool isDescendant(ParseNode* node);
     ParseNode* previousSibling();
     ParseNode* nextSibling();
     ParseNode* getParent();
     Symbol getData();
     void setData(Symbol data);
     int wordCount(bool excludeStopWords);
+    void constituentSpanList(int startIndex, vector<ConstituentSpan>& list);
     bool isLeaf();
     bool isDummyNode();
     string toSentence();

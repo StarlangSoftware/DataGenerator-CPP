@@ -12,7 +12,7 @@
  * @param fsm Morphological analyzer to be used.
  * @param wordNet Wordnet to be used.
  */
-SemanticInstanceGenerator::SemanticInstanceGenerator(FsmMorphologicalAnalyzer &fsm, WordNet &wordNet) {
+SemanticInstanceGenerator::SemanticInstanceGenerator(FsmMorphologicalAnalyzer& fsm, WordNet& wordNet) {
     this->fsm = fsm;
     this->wordNet = wordNet;
 }
@@ -34,7 +34,7 @@ Instance *SemanticInstanceGenerator::generateInstanceFromSentence(Sentence *sent
     if (classLabel.empty() || possibleSynSets.empty()){
         return nullptr;
     }
-    CompositeInstance* current = new CompositeInstance(classLabel);
+    auto* current = new CompositeInstance(classLabel);
     vector<string> possibleClassLabels;
     for (SynSet synSet : possibleSynSets) {
         possibleClassLabels.push_back(synSet.getId());

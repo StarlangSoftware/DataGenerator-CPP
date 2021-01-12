@@ -95,3 +95,7 @@ cmake-build-debug/CMakeFiles/DataGenerator.dir/InstanceGenerator/RootWordInstanc
 cmake-build-debug/CMakeFiles/DataGenerator.dir/InstanceGenerator/SemanticInstanceGenerator.cpp.o
 cmake-build-debug/CMakeFiles/DataGenerator.dir/InstanceGenerator/ShallowParseInstanceGenerator.cpp.o
 cmake-build-debug/CMakeFiles/DataGenerator.dir/InstanceGenerator/SimpleWindowInstanceGenerator.cpp.o
+/cmake-build-debug/CMakeFiles/Test.dir/
+/cmake-build-debug/CMakeFiles/Progress/
+/cmake-build-debug/CMakeFiles/DataGenerator.dir/InstanceGenerator/
+/cmake-build-debug/Test

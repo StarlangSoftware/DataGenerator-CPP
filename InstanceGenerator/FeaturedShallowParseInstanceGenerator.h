@@ -1,0 +1,21 @@
+//
+// Created by Olcay Taner YILDIZ on 12.01.2021.
+//
+
+#ifndef DATAGENERATOR_FEATUREDSHALLOWPARSEINSTANCEGENERATOR_H
+#define DATAGENERATOR_FEATUREDSHALLOWPARSEINSTANCEGENERATOR_H
+
+
+#include "ShallowParseInstanceGenerator.h"
+
+class FeaturedShallowParseInstanceGenerator : public ShallowParseInstanceGenerator{
+public:
+    FeaturedShallowParseInstanceGenerator(int windowSize);
+
+protected:
+    void addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex);
+    void addAttributesForEmptyWords(Instance* current, string emptyWord);
+};
+
+
+#endif //DATAGENERATOR_FEATUREDSHALLOWPARSEINSTANCEGENERATOR_H
