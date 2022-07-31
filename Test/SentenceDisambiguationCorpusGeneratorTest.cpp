@@ -8,7 +8,7 @@
 #include "../CorpusGenerator/SentenceDisambiguationCorpusGenerator.h"
 
 TEST_CASE("SentenceDisambiguationCorpusGeneratorTest-testGenerate") {
-    SentenceDisambiguationCorpusGenerator sentenceDisambiguationCorpusGenerator = SentenceDisambiguationCorpusGenerator("sentences/", "sentences.txt");
+    SentenceDisambiguationCorpusGenerator sentenceDisambiguationCorpusGenerator = SentenceDisambiguationCorpusGenerator("../sentences");
     DisambiguationCorpus* disambiguationCorpus = sentenceDisambiguationCorpusGenerator.generate();
     REQUIRE(10 == disambiguationCorpus->sentenceCount());
     REQUIRE(101 == disambiguationCorpus->numberOfWords());

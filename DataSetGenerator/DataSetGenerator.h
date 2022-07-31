@@ -17,7 +17,7 @@ protected:
     InstanceGenerator* instanceGenerator;
     vector<Instance*> generateInstanceListFromTree(ParseTreeDrawable* parseTree);
 public:
-    DataSetGenerator(const string &folder, const string &fileList, InstanceGenerator* instanceGenerator);
+    DataSetGenerator(const string &folder, InstanceGenerator* instanceGenerator);
     void setInstanceGenerator(InstanceGenerator* instanceGenerator);
     DataSet generate();
 };

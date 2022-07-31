@@ -11,6 +11,6 @@
  * @param pattern Pattern of the tree files to be included in the treebank. Use "." for all files.
  * @param semanticInstanceGenerator The instance generator used to generate the dataset.
  */
-SemanticDataSetGenerator::SemanticDataSetGenerator(const string &folder, const string &fileList,
-                                                   SemanticInstanceGenerator *semanticInstanceGenerator) : DataSetGenerator(folder, fileList, semanticInstanceGenerator){
+SemanticDataSetGenerator::SemanticDataSetGenerator(const string &folder,
+                                                   SemanticInstanceGenerator *semanticInstanceGenerator) : DataSetGenerator(folder, semanticInstanceGenerator){
 }

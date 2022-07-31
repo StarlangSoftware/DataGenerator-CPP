@@ -12,7 +12,7 @@
  * @param includePunctuation If true, punctuation symbols are also included in the dataset, false otherwise.
  * @param rootWordInstanceGenerator The instance generator used to generate the dataset.
  */
-RootWordDataSetGenerator::RootWordDataSetGenerator(const string &folder, const string &fileList,
-                                                   RootWordInstanceGenerator *rootWordInstanceGenerator) : DataSetGenerator(folder, fileList, rootWordInstanceGenerator){
+RootWordDataSetGenerator::RootWordDataSetGenerator(const string &folder,
+                                                   RootWordInstanceGenerator *rootWordInstanceGenerator) : DataSetGenerator(folder, rootWordInstanceGenerator){
 
 }

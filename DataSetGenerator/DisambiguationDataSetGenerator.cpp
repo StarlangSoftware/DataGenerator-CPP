@@ -12,7 +12,7 @@
  * @param includePunctuation If true, punctuation symbols are also included in the dataset, false otherwise.
  * @param disambiguationInstanceGenerator The instance generator used to generate the dataset.
  */
-DisambiguationDataSetGenerator::DisambiguationDataSetGenerator(const string &folder, const string &fileList,
-                                                               DisambiguationInstanceGenerator *instanceGenerator) : DataSetGenerator(folder, fileList, instanceGenerator){
+DisambiguationDataSetGenerator::DisambiguationDataSetGenerator(const string &folder,
+                                                               DisambiguationInstanceGenerator *instanceGenerator) : DataSetGenerator(folder, instanceGenerator){
 
 }

@@ -9,7 +9,7 @@
 TEST_CASE("SemanticDataSetGeneratorTest-testGenerate") {
     FsmMorphologicalAnalyzer fsmMorphologicalAnalyzer = FsmMorphologicalAnalyzer();
     WordNet turkish = WordNet();
-    SemanticDataSetGenerator semanticDataSetGenerator = SemanticDataSetGenerator("trees/", "trees.txt", new FeaturedSemanticInstanceGenerator(fsmMorphologicalAnalyzer, turkish, 1));
+    SemanticDataSetGenerator semanticDataSetGenerator = SemanticDataSetGenerator("../trees", new FeaturedSemanticInstanceGenerator(fsmMorphologicalAnalyzer, turkish, 1));
     DataSet dataSet = semanticDataSetGenerator.generate();
     REQUIRE(88 == dataSet.sampleSize());
     REQUIRE(64 == dataSet.classCount());

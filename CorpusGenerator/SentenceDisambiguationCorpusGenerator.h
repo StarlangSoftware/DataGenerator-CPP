@@ -14,7 +14,7 @@ private:
     AnnotatedCorpus* annotatedCorpus;
 public:
     ~SentenceDisambiguationCorpusGenerator();
-    SentenceDisambiguationCorpusGenerator(const string& folder, const string& fileList);
+    explicit SentenceDisambiguationCorpusGenerator(const string& folder);
     DisambiguationCorpus* generate();
 };
 

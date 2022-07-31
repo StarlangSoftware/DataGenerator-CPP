@@ -12,8 +12,8 @@
  * @param directory Directory where the treebank files reside.
  * @param pattern Pattern of the tree files to be included in the treebank. Use "." for all files.
  */
-NERCorpusGenerator::NERCorpusGenerator(const string &folder, const string &fileList) {
-    treeBank = new TreeBankDrawable(folder, fileList);
+NERCorpusGenerator::NERCorpusGenerator(const string &folder) {
+    treeBank = new TreeBankDrawable(folder);
 }
 
 NERCorpusGenerator::~NERCorpusGenerator() {

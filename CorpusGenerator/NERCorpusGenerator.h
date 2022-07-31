@@ -14,7 +14,7 @@ private:
     TreeBankDrawable* treeBank;
 public:
     ~NERCorpusGenerator();
-    NERCorpusGenerator(const string& folder, const string& fileList);
+    explicit NERCorpusGenerator(const string& folder);
     NERCorpus* generate();
 };
 

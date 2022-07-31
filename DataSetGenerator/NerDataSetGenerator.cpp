@@ -11,7 +11,7 @@
  * @param pattern Pattern of the tree files to be included in the treebank. Use "." for all files.
  * @param nerInstanceGenerator The instance generator used to generate the dataset.
  */
-NerDataSetGenerator::NerDataSetGenerator(const string &folder, const string &fileList,
-                                         NerInstanceGenerator *instanceGenerator) : DataSetGenerator(folder, fileList, instanceGenerator){
+NerDataSetGenerator::NerDataSetGenerator(const string &folder,
+                                         NerInstanceGenerator *instanceGenerator) : DataSetGenerator(folder, instanceGenerator){
 
 }

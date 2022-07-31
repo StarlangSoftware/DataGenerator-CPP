@@ -7,7 +7,7 @@
 #include "../InstanceGenerator/FeaturedDisambiguationInstanceGenerator.h"
 
 TEST_CASE("DisambiguationDataSetGeneratorTest-testGenerate") {
-    DisambiguationDataSetGenerator disambiguationDataSetGenerator = DisambiguationDataSetGenerator("trees/", "trees.txt", new FeaturedDisambiguationInstanceGenerator(1));
+    DisambiguationDataSetGenerator disambiguationDataSetGenerator = DisambiguationDataSetGenerator("../trees", new FeaturedDisambiguationInstanceGenerator(1));
     DataSet dataSet = disambiguationDataSetGenerator.generate();
     REQUIRE(88 == dataSet.sampleSize());
     REQUIRE(41 == dataSet.classCount());

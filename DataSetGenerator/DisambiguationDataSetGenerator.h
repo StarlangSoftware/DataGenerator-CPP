@@ -11,7 +11,7 @@
 
 class DisambiguationDataSetGenerator : public DataSetGenerator{
 public:
-    DisambiguationDataSetGenerator(const string &folder, const string &fileList, DisambiguationInstanceGenerator* instanceGenerator);
+    DisambiguationDataSetGenerator(const string &folder, DisambiguationInstanceGenerator* instanceGenerator);
 };
 
 

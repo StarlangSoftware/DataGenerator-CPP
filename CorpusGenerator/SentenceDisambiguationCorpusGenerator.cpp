@@ -14,8 +14,8 @@
  * @param folder Directory where the sentence files reside.
  * @param filelist File list.
  */
-SentenceDisambiguationCorpusGenerator::SentenceDisambiguationCorpusGenerator(const string &folder, const string &fileList) {
-    annotatedCorpus = new AnnotatedCorpus(folder, fileList);
+SentenceDisambiguationCorpusGenerator::SentenceDisambiguationCorpusGenerator(const string &folder) {
+    annotatedCorpus = new AnnotatedCorpus(folder);
 }
 
 SentenceDisambiguationCorpusGenerator::~SentenceDisambiguationCorpusGenerator() {

@@ -11,7 +11,7 @@
 
 class NerDataSetGenerator  : public DataSetGenerator{
 public:
-    NerDataSetGenerator(const string &folder, const string &fileList, NerInstanceGenerator* instanceGenerator);
+    NerDataSetGenerator(const string &folder, NerInstanceGenerator* instanceGenerator);
 };
 
 

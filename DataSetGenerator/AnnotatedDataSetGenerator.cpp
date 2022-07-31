@@ -13,9 +13,9 @@
  * @param pattern Pattern of the tree files to be included in the treebank. Use "." for all files.
  * @param instanceGenerator The instance generator used to generate the dataset.
  */
-AnnotatedDataSetGenerator::AnnotatedDataSetGenerator(const string &folder, const string &fileList,
+AnnotatedDataSetGenerator::AnnotatedDataSetGenerator(const string &folder,
                                                      InstanceGenerator *instanceGenerator) {
-    corpus = new AnnotatedCorpus(folder, fileList);
+    corpus = new AnnotatedCorpus(folder);
     this->instanceGenerator = instanceGenerator;
 }
 

@@ -11,7 +11,7 @@
 
 class RootWordDataSetGenerator : public DataSetGenerator{
 public:
-    RootWordDataSetGenerator(const string &folder, const string &fileList, RootWordInstanceGenerator* rootWordInstanceGenerator);
+    RootWordDataSetGenerator(const string &folder, RootWordInstanceGenerator* rootWordInstanceGenerator);
 };
 
 

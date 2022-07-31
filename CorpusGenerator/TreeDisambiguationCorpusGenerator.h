@@ -13,7 +13,7 @@ private:
     TreeBankDrawable* treeBank;
 public:
     ~TreeDisambiguationCorpusGenerator();
-    TreeDisambiguationCorpusGenerator(const string& folder, const string& fileList);
+    explicit TreeDisambiguationCorpusGenerator(const string& folder);
     DisambiguationCorpus* generate();
 };
 

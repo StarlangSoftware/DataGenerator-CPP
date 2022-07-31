@@ -14,8 +14,8 @@
  * @param includePunctuation If true, punctuation symbols are also included in the dataset, false otherwise.
  * @param instanceGenerator The instance generator used to generate the dataset.
  */
-DataSetGenerator::DataSetGenerator(const string &folder, const string &fileList, InstanceGenerator *instanceGenerator) {
-    treeBank = new TreeBankDrawable(folder, fileList);
+DataSetGenerator::DataSetGenerator(const string &folder, InstanceGenerator *instanceGenerator) {
+    treeBank = new TreeBankDrawable(folder);
     this->instanceGenerator = instanceGenerator;
 }
 

@@ -11,7 +11,7 @@
 
 class SemanticDataSetGenerator : public DataSetGenerator{
 public:
-    SemanticDataSetGenerator(const string &folder, const string &fileList, SemanticInstanceGenerator* semanticInstanceGenerator);
+    SemanticDataSetGenerator(const string &folder, SemanticInstanceGenerator* semanticInstanceGenerator);
 };
 
 

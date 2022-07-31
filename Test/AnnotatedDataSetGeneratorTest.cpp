@@ -11,7 +11,7 @@
 #include "../InstanceGenerator/FeaturedDisambiguationInstanceGenerator.h"
 
 TEST_CASE("AnnotatedDataSetGeneratorTest-testNERGenerate") {
-    AnnotatedDataSetGenerator annotatedDataSetGenerator = AnnotatedDataSetGenerator("sentences/", "sentences.txt", new FeaturedNerInstanceGenerator(1));
+    AnnotatedDataSetGenerator annotatedDataSetGenerator = AnnotatedDataSetGenerator("../sentences", new FeaturedNerInstanceGenerator(1));
     DataSet dataSet = annotatedDataSetGenerator.generate();
     REQUIRE(101 == dataSet.sampleSize());
     REQUIRE(3 == dataSet.classCount());
@@ -21,7 +21,7 @@ TEST_CASE("AnnotatedDataSetGeneratorTest-testNERGenerate") {
 TEST_CASE("AnnotatedDataSetGeneratorTest-testSemanticGenerate") {
     FsmMorphologicalAnalyzer fsmMorphologicalAnalyzer = FsmMorphologicalAnalyzer();
     WordNet turkish = WordNet();
-    AnnotatedDataSetGenerator annotatedDataSetGenerator = AnnotatedDataSetGenerator("sentences/", "sentences.txt", new FeaturedSemanticInstanceGenerator(fsmMorphologicalAnalyzer, turkish, 1));
+    AnnotatedDataSetGenerator annotatedDataSetGenerator = AnnotatedDataSetGenerator("../sentences", new FeaturedSemanticInstanceGenerator(fsmMorphologicalAnalyzer, turkish, 1));
     DataSet dataSet = annotatedDataSetGenerator.generate();
     REQUIRE(101 == dataSet.sampleSize());
     REQUIRE(71 == dataSet.classCount());
@@ -29,7 +29,7 @@ TEST_CASE("AnnotatedDataSetGeneratorTest-testSemanticGenerate") {
 }
 
 TEST_CASE("AnnotatedDataSetGeneratorTest-testShallowParseGenerate") {
-    AnnotatedDataSetGenerator annotatedDataSetGenerator = AnnotatedDataSetGenerator("sentences/", "sentences.txt", new FeaturedShallowParseInstanceGenerator(1));
+    AnnotatedDataSetGenerator annotatedDataSetGenerator = AnnotatedDataSetGenerator("../sentences", new FeaturedShallowParseInstanceGenerator(1));
     DataSet dataSet = annotatedDataSetGenerator.generate();
     REQUIRE(96 == dataSet.sampleSize());
     REQUIRE(6 == dataSet.classCount());
@@ -37,7 +37,7 @@ TEST_CASE("AnnotatedDataSetGeneratorTest-testShallowParseGenerate") {
 }
 
 TEST_CASE("AnnotatedDataSetGeneratorTest-testDisambiguationGenerate") {
-    AnnotatedDataSetGenerator annotatedDataSetGenerator = AnnotatedDataSetGenerator("sentences/", "sentences.txt", new FeaturedDisambiguationInstanceGenerator(1));
+    AnnotatedDataSetGenerator annotatedDataSetGenerator = AnnotatedDataSetGenerator("../sentences", new FeaturedDisambiguationInstanceGenerator(1));
     DataSet dataSet = annotatedDataSetGenerator.generate();
     REQUIRE(101 == dataSet.sampleSize());
     REQUIRE(43 == dataSet.classCount());
