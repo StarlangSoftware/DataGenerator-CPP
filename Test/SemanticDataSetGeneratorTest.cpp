@@ -3,8 +3,8 @@
 //
 
 #include "catch.hpp"
-#include "../DataSetGenerator/SemanticDataSetGenerator.h"
-#include "../InstanceGenerator/FeaturedSemanticInstanceGenerator.h"
+#include "../src/DataSetGenerator/SemanticDataSetGenerator.h"
+#include "../src/InstanceGenerator/FeaturedSemanticInstanceGenerator.h"
 
 TEST_CASE("SemanticDataSetGeneratorTest-testGenerate") {
     FsmMorphologicalAnalyzer fsmMorphologicalAnalyzer = FsmMorphologicalAnalyzer();

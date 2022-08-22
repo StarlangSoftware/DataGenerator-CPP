@@ -4,11 +4,11 @@
 
 #include <WordNet.h>
 #include "catch.hpp"
-#include "../DataSetGenerator/AnnotatedDataSetGenerator.h"
-#include "../InstanceGenerator/FeaturedNerInstanceGenerator.h"
-#include "../InstanceGenerator/FeaturedSemanticInstanceGenerator.h"
-#include "../InstanceGenerator/FeaturedShallowParseInstanceGenerator.h"
-#include "../InstanceGenerator/FeaturedDisambiguationInstanceGenerator.h"
+#include "../src/DataSetGenerator/AnnotatedDataSetGenerator.h"
+#include "../src/InstanceGenerator/FeaturedNerInstanceGenerator.h"
+#include "../src/InstanceGenerator/FeaturedSemanticInstanceGenerator.h"
+#include "../src/InstanceGenerator/FeaturedShallowParseInstanceGenerator.h"
+#include "../src/InstanceGenerator/FeaturedDisambiguationInstanceGenerator.h"
 
 TEST_CASE("AnnotatedDataSetGeneratorTest-testNERGenerate") {
     AnnotatedDataSetGenerator annotatedDataSetGenerator = AnnotatedDataSetGenerator("../sentences", new FeaturedNerInstanceGenerator(1));

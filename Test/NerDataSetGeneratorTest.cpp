@@ -3,8 +3,8 @@
 //
 
 #include "catch.hpp"
-#include "../DataSetGenerator/NerDataSetGenerator.h"
-#include "../InstanceGenerator/FeaturedNerInstanceGenerator.h"
+#include "../src/DataSetGenerator/NerDataSetGenerator.h"
+#include "../src/InstanceGenerator/FeaturedNerInstanceGenerator.h"
 
 TEST_CASE("NerDataSetGeneratorTest-testGenerate") {
     NerDataSetGenerator nerDataSetGenerator = NerDataSetGenerator("../trees", new FeaturedNerInstanceGenerator(1));

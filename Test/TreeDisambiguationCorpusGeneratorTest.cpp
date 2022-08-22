@@ -3,7 +3,7 @@
 //
 
 #include "catch.hpp"
-#include "../CorpusGenerator/TreeDisambiguationCorpusGenerator.h"
+#include "../src/CorpusGenerator/TreeDisambiguationCorpusGenerator.h"
 
 TEST_CASE("TreeDisambiguationCorpusGeneratorTest-testGenerate") {
     TreeDisambiguationCorpusGenerator treeDisambiguationCorpusGenerator = TreeDisambiguationCorpusGenerator("../trees");

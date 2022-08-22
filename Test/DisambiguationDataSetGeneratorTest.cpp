@@ -3,8 +3,8 @@
 //
 
 #include "catch.hpp"
-#include "../DataSetGenerator/DisambiguationDataSetGenerator.h"
-#include "../InstanceGenerator/FeaturedDisambiguationInstanceGenerator.h"
+#include "../src/DataSetGenerator/DisambiguationDataSetGenerator.h"
+#include "../src/InstanceGenerator/FeaturedDisambiguationInstanceGenerator.h"
 
 TEST_CASE("DisambiguationDataSetGeneratorTest-testGenerate") {
     DisambiguationDataSetGenerator disambiguationDataSetGenerator = DisambiguationDataSetGenerator("../trees", new FeaturedDisambiguationInstanceGenerator(1));
