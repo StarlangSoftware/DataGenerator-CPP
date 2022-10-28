@@ -10,7 +10,7 @@
 
 class IsTimeAttribute : public BinaryAttribute{
 public:
-    explicit IsTimeAttribute(string surfaceForm);
+    explicit IsTimeAttribute(const string& surfaceForm);
 };
 
 

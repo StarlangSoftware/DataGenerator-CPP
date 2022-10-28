@@ -20,18 +20,18 @@ AnnotatedDataSetGenerator::AnnotatedDataSetGenerator(const string &folder,
 }
 
 /**
- * Mutator for the instanceGenerator attribute.
- * @param instanceGenerator Input instanceGenerator
+ * Mutator for the _instanceGenerator attribute.
+ * @param _instanceGenerator Input _instanceGenerator
  */
-void AnnotatedDataSetGenerator::setInstanceGenerator(InstanceGenerator *instanceGenerator) {
-    this->instanceGenerator = instanceGenerator;
+void AnnotatedDataSetGenerator::setInstanceGenerator(InstanceGenerator *_instanceGenerator) {
+    this->instanceGenerator = _instanceGenerator;
 }
 
 /**
  * Creates a dataset from the corpus. Calls generateInstanceFromSentence for each parse sentence in the corpus.
  * @return Created dataset.
  */
-DataSet AnnotatedDataSetGenerator::generate() {
+DataSet AnnotatedDataSetGenerator::generate() const{
     AnnotatedSentence* sentence;
     DataSet dataSet;
     for (int i = 0; i < corpus->sentenceCount(); i++){

@@ -11,7 +11,7 @@
 
 class IsFractionAttribute : public BinaryAttribute{
 public:
-    explicit IsFractionAttribute(MorphologicalParse parse);
+    explicit IsFractionAttribute(const MorphologicalParse& parse);
 };
 
 

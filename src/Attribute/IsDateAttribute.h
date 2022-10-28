@@ -11,7 +11,7 @@
 
 class IsDateAttribute : public BinaryAttribute {
 public:
-    explicit IsDateAttribute (MorphologicalParse parse);
+    explicit IsDateAttribute (const MorphologicalParse& parse);
 };
 
 

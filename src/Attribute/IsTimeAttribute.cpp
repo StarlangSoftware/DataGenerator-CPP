@@ -10,6 +10,6 @@
  * value "true", otherwise "false".
  * @param surfaceForm Surface form of the word.
  */
-IsTimeAttribute::IsTimeAttribute(string surfaceForm) : BinaryAttribute(Word::isTime(move(surfaceForm))) {
+IsTimeAttribute::IsTimeAttribute(const string& surfaceForm) : BinaryAttribute(Word::isTime(surfaceForm)) {
 
 }

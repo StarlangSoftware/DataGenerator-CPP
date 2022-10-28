@@ -11,7 +11,7 @@
 
 class IsNumberAttribute : public BinaryAttribute{
 public:
-    explicit IsNumberAttribute(MorphologicalParse parse);
+    explicit IsNumberAttribute(const MorphologicalParse& parse);
 };
 
 

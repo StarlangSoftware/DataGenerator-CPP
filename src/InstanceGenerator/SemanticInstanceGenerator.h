@@ -12,11 +12,11 @@
 
 class SemanticInstanceGenerator : public SimpleWindowInstanceGenerator{
 private:
-    FsmMorphologicalAnalyzer fsm;
-    WordNet wordNet;
+    FsmMorphologicalAnalyzer* fsm;
+    WordNet* wordNet;
 public:
     SemanticInstanceGenerator(FsmMorphologicalAnalyzer& fsm, WordNet& wordNet);
-    Instance* generateInstanceFromSentence(Sentence* sentence, int wordIndex) override;
+    Instance* generateInstanceFromSentence(Sentence* sentence, int wordIndex) const override;
 };
 
 

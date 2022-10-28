@@ -25,7 +25,7 @@ FeaturedRootWordInstanceGenerator::FeaturedRootWordInstanceGenerator(int windowS
  * @param wordIndex The index of the word in the sentence.
  */
 void
-FeaturedRootWordInstanceGenerator::addAttributesForPreviousWords(Instance* current, Sentence* sentence, int wordIndex) {
+FeaturedRootWordInstanceGenerator::addAttributesForPreviousWords(Instance* current, Sentence* sentence, int wordIndex) const{
     MorphologicalParse* parse;
     AnnotatedWord* word;
     word = (AnnotatedWord*) sentence->getWord(wordIndex);
@@ -41,7 +41,7 @@ FeaturedRootWordInstanceGenerator::addAttributesForPreviousWords(Instance* curre
  * @param current Current classification instance
  * @param emptyWord String form to place for empty words.
  */
-void FeaturedRootWordInstanceGenerator::addAttributesForEmptyWords(Instance *current, string emptyWord) {
+void FeaturedRootWordInstanceGenerator::addAttributesForEmptyWords(Instance *current, const string& emptyWord) const{
     current->addAttribute(new DiscreteAttribute("NULL"));
     current->addAttribute(new BinaryAttribute(false));
 }

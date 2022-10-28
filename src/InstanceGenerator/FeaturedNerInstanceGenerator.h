@@ -13,8 +13,8 @@ public:
     explicit FeaturedNerInstanceGenerator(int windowSize);
 
 protected:
-    void addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex);
-    void addAttributesForEmptyWords(Instance* current, string emptyWord);
+    void addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex) const;
+    void addAttributesForEmptyWords(Instance* current, const string& emptyWord) const;
 };
 
 

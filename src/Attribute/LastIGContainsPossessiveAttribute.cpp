@@ -9,6 +9,6 @@
  * the attribute will be "true", otherwise "false".
  * @param parse Morphological parse of the word.
  */
-LastIGContainsPossessiveAttribute::LastIGContainsPossessiveAttribute(MorphologicalParse parse) : BinaryAttribute(parse.lastIGContainsPossessive()) {
+LastIGContainsPossessiveAttribute::LastIGContainsPossessiveAttribute(const MorphologicalParse& parse) : BinaryAttribute(parse.lastIGContainsPossessive()) {
 
 }

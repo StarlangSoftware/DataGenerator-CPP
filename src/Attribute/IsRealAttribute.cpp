@@ -9,5 +9,5 @@
  * tag REAL), the attribute will have the value "true", otherwise "false".
  * @param parse Morphological parse of the word.
  */
-IsRealAttribute::IsRealAttribute(MorphologicalParse parse) : BinaryAttribute(parse.isReal()){
+IsRealAttribute::IsRealAttribute(const MorphologicalParse& parse) : BinaryAttribute(parse.isReal()){
 }

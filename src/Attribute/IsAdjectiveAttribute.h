@@ -10,7 +10,7 @@
 
 class IsAdjectiveAttribute : public BinaryAttribute{
 public:
-    explicit IsAdjectiveAttribute(MorphologicalParse parse);
+    explicit IsAdjectiveAttribute(const MorphologicalParse& parse);
 };
 
 

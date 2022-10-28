@@ -11,7 +11,7 @@
 
 class RootPosAttribute : public DiscreteAttribute{
 public:
-    explicit RootPosAttribute(MorphologicalParse parse);
+    explicit RootPosAttribute(const MorphologicalParse& parse);
 };
 
 

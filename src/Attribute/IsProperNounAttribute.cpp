@@ -9,5 +9,5 @@
  * tag PROPERNOUN), the attribute will have the value "true", otherwise "false".
  * @param parse Morphological parse of the word.
  */
-IsProperNounAttribute::IsProperNounAttribute(MorphologicalParse parse) : BinaryAttribute(parse.isProperNoun()){
+IsProperNounAttribute::IsProperNounAttribute(const MorphologicalParse& parse) : BinaryAttribute(parse.isProperNoun()){
 }

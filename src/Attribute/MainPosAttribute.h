@@ -11,7 +11,7 @@
 
 class MainPosAttribute : public DiscreteAttribute{
 public:
-    explicit MainPosAttribute(MorphologicalParse parse);
+    explicit MainPosAttribute(const MorphologicalParse& parse);
 };
 
 

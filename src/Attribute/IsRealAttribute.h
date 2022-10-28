@@ -11,7 +11,7 @@
 
 class IsRealAttribute : public BinaryAttribute{
 public:
-    explicit IsRealAttribute (MorphologicalParse parse);
+    explicit IsRealAttribute (const MorphologicalParse& parse);
 };
 
 

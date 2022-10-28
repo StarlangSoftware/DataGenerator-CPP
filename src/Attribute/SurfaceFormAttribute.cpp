@@ -8,6 +8,6 @@
  * Discrete attribute for a given word. Returns the surface form.
  * @param surfaceForm Surface form of the word.
  */
-SurfaceFormAttribute::SurfaceFormAttribute(string surfaceForm) : DiscreteAttribute(move(surfaceForm)) {
+SurfaceFormAttribute::SurfaceFormAttribute(const string& surfaceForm) : DiscreteAttribute(surfaceForm) {
 
 }

@@ -9,5 +9,5 @@
  * the value "true", otherwise "false".
  * @param parse Morphological parse of the word.
  */
-IsAdjectiveAttribute::IsAdjectiveAttribute(MorphologicalParse parse) : BinaryAttribute(parse.isAdjective()){
+IsAdjectiveAttribute::IsAdjectiveAttribute(const MorphologicalParse& parse) : BinaryAttribute(parse.isAdjective()){
 }

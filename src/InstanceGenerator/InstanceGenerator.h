@@ -13,7 +13,7 @@ class InstanceGenerator {
 protected:
     int windowSize;
 public:
-    virtual Instance* generateInstanceFromSentence(Sentence* sentence, int wordIndex) = 0;
+    virtual Instance* generateInstanceFromSentence(Sentence* sentence, int wordIndex) const = 0;
 };
 
 

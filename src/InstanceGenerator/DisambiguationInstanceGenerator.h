@@ -10,10 +10,10 @@
 
 class DisambiguationInstanceGenerator : public InstanceGenerator{
 protected:
-    virtual void addAttributesForPreviousWords(Instance* current, Sentence* sentence, int wordIndex) = 0;
-    virtual void addAttributesForEmptyWords(Instance* current, string emptyWord) = 0;
+    virtual void addAttributesForPreviousWords(Instance* current, Sentence* sentence, int wordIndex) const = 0;
+    virtual void addAttributesForEmptyWords(Instance* current, const string& emptyWord) const = 0;
 public:
-    Instance* generateInstanceFromSentence(Sentence* sentence, int wordIndex) override;
+    Instance* generateInstanceFromSentence(Sentence* sentence, int wordIndex) const override;
 };
 
 

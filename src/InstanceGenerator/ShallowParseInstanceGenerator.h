@@ -10,7 +10,7 @@
 
 class ShallowParseInstanceGenerator : public SimpleWindowInstanceGenerator{
 public:
-    Instance* generateInstanceFromSentence(Sentence* sentence, int wordIndex) override;
+    Instance* generateInstanceFromSentence(Sentence* sentence, int wordIndex) const override;
 };
 
 

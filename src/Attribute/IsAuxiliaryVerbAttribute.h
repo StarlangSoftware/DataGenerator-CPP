@@ -11,7 +11,7 @@
 
 class IsAuxiliaryVerbAttribute : public BinaryAttribute{
 public:
-    explicit IsAuxiliaryVerbAttribute(MorphologicalParse parse);
+    explicit IsAuxiliaryVerbAttribute(const MorphologicalParse& parse);
 };
 
 

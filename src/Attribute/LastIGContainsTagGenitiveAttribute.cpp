@@ -9,6 +9,6 @@
  * the attribute will be "true", otherwise "false".
  * @param parse Morphological parse of the word.
  */
-LastIGContainsTagGenitiveAttribute::LastIGContainsTagGenitiveAttribute(MorphologicalParse parse) : LastIGContainsTagAttribute(move(parse), MorphologicalTag::GENITIVE){
+LastIGContainsTagGenitiveAttribute::LastIGContainsTagGenitiveAttribute(const MorphologicalParse& parse) : LastIGContainsTagAttribute(parse, MorphologicalTag::GENITIVE){
 
 }

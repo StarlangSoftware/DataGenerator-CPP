@@ -10,6 +10,6 @@
  * value "true", otherwise "false".
  * @param surfaceForm Surface form of the word.
  */
-IsOrganizationAttribute::IsOrganizationAttribute(string surfaceForm) : BinaryAttribute(Word::isOrganization(move(surfaceForm))) {
+IsOrganizationAttribute::IsOrganizationAttribute(const string& surfaceForm) : BinaryAttribute(Word::isOrganization(surfaceForm)) {
 
 }

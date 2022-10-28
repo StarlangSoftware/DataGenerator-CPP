@@ -10,7 +10,7 @@
 
 class IsCapitalAttribute : public BinaryAttribute{
 public:
-    explicit IsCapitalAttribute(string surfaceForm);
+    explicit IsCapitalAttribute(const string& surfaceForm);
 private:
     bool isUpper(const string& surfaceForm);
 };

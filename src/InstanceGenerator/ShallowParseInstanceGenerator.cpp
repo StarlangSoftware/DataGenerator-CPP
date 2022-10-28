@@ -13,7 +13,7 @@
  * @return Classification instance.
  * @throws InstanceNotGenerated
  */
-Instance *ShallowParseInstanceGenerator::generateInstanceFromSentence(Sentence *sentence, int wordIndex) {
+Instance *ShallowParseInstanceGenerator::generateInstanceFromSentence(Sentence *sentence, int wordIndex) const{
     Instance* current;
     AnnotatedWord* word;
     word = (AnnotatedWord*) sentence->getWord(wordIndex);

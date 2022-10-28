@@ -11,7 +11,7 @@
 
 class IsProperNounAttribute : public BinaryAttribute{
 public:
-    explicit IsProperNounAttribute(MorphologicalParse parse);
+    explicit IsProperNounAttribute(const MorphologicalParse& parse);
 };
 
 

@@ -8,6 +8,6 @@
  * Discrete attribute for a given word. Returns the part of speech of the root word
  * @param parse Morphological parse of the word.
  */
-RootPosAttribute::RootPosAttribute(MorphologicalParse parse) : DiscreteAttribute(parse.getRootPos()){
+RootPosAttribute::RootPosAttribute(const MorphologicalParse& parse) : DiscreteAttribute(parse.getRootPos()){
 
 }

@@ -28,7 +28,7 @@ TreeDisambiguationCorpusGenerator::~TreeDisambiguationCorpusGenerator() {
  *
  * @return Created disambiguation corpus.
  */
-DisambiguationCorpus* TreeDisambiguationCorpusGenerator::generate() {
+DisambiguationCorpus* TreeDisambiguationCorpusGenerator::generate() const{
     ParseTreeDrawable* parseTree;
     AnnotatedSentence* sentence;
     AnnotatedSentence* disambiguationSentence;

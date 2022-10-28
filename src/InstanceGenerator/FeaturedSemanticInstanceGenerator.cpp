@@ -35,7 +35,7 @@
  * @param windowSize Number of previous (next) words to be considered in adding attributes.
  */
 FeaturedSemanticInstanceGenerator::FeaturedSemanticInstanceGenerator(FsmMorphologicalAnalyzer& fsm, WordNet& wordNet,
-                                                                     int windowSize): SemanticInstanceGenerator(fsm, wordNet) {
+                                                                     int windowSize): SemanticInstanceGenerator(fsm, wordNet){
     this->windowSize = windowSize;
 }
 
@@ -47,7 +47,7 @@ FeaturedSemanticInstanceGenerator::FeaturedSemanticInstanceGenerator(FsmMorpholo
  * @param sentence Input sentence.
  * @param wordIndex The index of the word in the sentence.
  */
-void FeaturedSemanticInstanceGenerator::addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex) {
+void FeaturedSemanticInstanceGenerator::addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex) const{
     MorphologicalParse* parse;
     AnnotatedWord* word;
     word = (AnnotatedWord*) sentence->getWord(wordIndex);
@@ -90,7 +90,7 @@ void FeaturedSemanticInstanceGenerator::addAttributesForWords(Instance* current,
  * @param current Current classification instance
  * @param emptyWord String form to place for empty words.
  */
-void FeaturedSemanticInstanceGenerator::addAttributesForEmptyWords(Instance* current, string emptyWord) {
+void FeaturedSemanticInstanceGenerator::addAttributesForEmptyWords(Instance* current, const string& emptyWord) const{
     current->addAttribute(new BinaryAttribute(false));
     current->addAttribute(new BinaryAttribute(false));
     current->addAttribute(new BinaryAttribute(false));

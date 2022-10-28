@@ -13,8 +13,8 @@
  * @param wordNet Wordnet to be used.
  */
 SemanticInstanceGenerator::SemanticInstanceGenerator(FsmMorphologicalAnalyzer& fsm, WordNet& wordNet) {
-    this->fsm = fsm;
-    this->wordNet = wordNet;
+    this->fsm = &fsm;
+    this->wordNet = &wordNet;
 }
 
 /**
@@ -27,8 +27,8 @@ SemanticInstanceGenerator::SemanticInstanceGenerator(FsmMorphologicalAnalyzer& f
  * @return Classification instance.
  * @throws InstanceNotGenerated
  */
-Instance *SemanticInstanceGenerator::generateInstanceFromSentence(Sentence *sentence, int wordIndex) {
-    vector<SynSet> possibleSynSets = ((AnnotatedSentence*) sentence)->constructSynSets(wordNet, fsm, wordIndex);
+Instance *SemanticInstanceGenerator::generateInstanceFromSentence(Sentence *sentence, int wordIndex) const{
+    vector<SynSet> possibleSynSets = ((AnnotatedSentence*) sentence)->constructSynSets(*wordNet, *fsm, wordIndex);
     auto* word = (AnnotatedWord*) sentence->getWord(wordIndex);
     string classLabel = word->getSemantic();
     if (classLabel.empty() || possibleSynSets.empty()){
@@ -36,7 +36,7 @@ Instance *SemanticInstanceGenerator::generateInstanceFromSentence(Sentence *sent
     }
     auto* current = new CompositeInstance(classLabel);
     vector<string> possibleClassLabels;
-    for (SynSet synSet : possibleSynSets) {
+    for (const SynSet& synSet : possibleSynSets) {
         possibleClassLabels.push_back(synSet.getId());
     }
     current->setPossibleClassLabels(possibleClassLabels);

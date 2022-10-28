@@ -33,7 +33,7 @@ void DataSetGenerator::setInstanceGenerator(InstanceGenerator *instanceGenerator
  * @param parseTree Parsetree for which a set of instances will be created
  * @return An array of instances.
  */
-vector<Instance *> DataSetGenerator::generateInstanceListFromTree(ParseTreeDrawable *parseTree) {
+vector<Instance *> DataSetGenerator::generateInstanceListFromTree(ParseTreeDrawable *parseTree) const{
     vector<Instance*> instanceList;
     AnnotatedSentence* annotatedSentence = parseTree->generateAnnotatedSentence();
     for (int i = 0; i < annotatedSentence->wordCount(); i++){
@@ -49,7 +49,7 @@ vector<Instance *> DataSetGenerator::generateInstanceListFromTree(ParseTreeDrawa
  * Creates a dataset from the treeBank. Calls generateInstanceListFromTree for each parse tree in the treebank.
  * @return Created dataset.
  */
-DataSet DataSetGenerator::generate() {
+DataSet DataSetGenerator::generate() const{
     ParseTreeDrawable* parseTree;
     DataSet dataSet;
     for (int i = 0; i < treeBank->size(); i++){

@@ -10,7 +10,7 @@
 
 class LastIGContainsTagGenitiveAttribute : public LastIGContainsTagAttribute{
 public:
-    explicit LastIGContainsTagGenitiveAttribute(MorphologicalParse parse);
+    explicit LastIGContainsTagGenitiveAttribute(const MorphologicalParse& parse);
 };
 
 

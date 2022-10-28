@@ -10,6 +10,6 @@
  * value "true", otherwise "false".
  * @param surfaceForm Surface form of the word.
  */
-IsMoneyAttribute::IsMoneyAttribute(string surfaceForm) : BinaryAttribute(Word::isMoney(move(surfaceForm))) {
+IsMoneyAttribute::IsMoneyAttribute(const string& surfaceForm) : BinaryAttribute(Word::isMoney(surfaceForm)) {
 
 }

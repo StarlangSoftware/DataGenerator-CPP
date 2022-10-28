@@ -16,8 +16,8 @@ protected:
     InstanceGenerator* instanceGenerator;
 public:
     AnnotatedDataSetGenerator(const string& folder, InstanceGenerator* instanceGenerator);
-    void setInstanceGenerator(InstanceGenerator* instanceGenerator);
-    DataSet generate();
+    void setInstanceGenerator(InstanceGenerator* _instanceGenerator);
+    DataSet generate() const;
 };
 
 

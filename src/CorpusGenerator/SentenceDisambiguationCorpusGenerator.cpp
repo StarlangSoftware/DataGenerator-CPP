@@ -27,7 +27,7 @@ SentenceDisambiguationCorpusGenerator::~SentenceDisambiguationCorpusGenerator() 
  *
  * @return Created disambiguation corpus.
  */
-DisambiguationCorpus* SentenceDisambiguationCorpusGenerator::generate() {
+DisambiguationCorpus* SentenceDisambiguationCorpusGenerator::generate() const{
     AnnotatedSentence* sentence;
     AnnotatedSentence* disambiguationSentence;
     auto* corpus = new DisambiguationCorpus();

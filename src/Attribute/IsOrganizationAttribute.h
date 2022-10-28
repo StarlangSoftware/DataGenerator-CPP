@@ -10,7 +10,7 @@
 
 class IsOrganizationAttribute : public BinaryAttribute{
 public:
-    explicit IsOrganizationAttribute(string surfaceForm);
+    explicit IsOrganizationAttribute(const string& surfaceForm);
 };
 
 

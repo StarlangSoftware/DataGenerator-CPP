@@ -10,7 +10,7 @@
 
 class CaseAttribute : public DiscreteAttribute{
 public:
-    explicit CaseAttribute(MorphologicalParse parse);
+    explicit CaseAttribute(const MorphologicalParse& parse);
 };
 
 

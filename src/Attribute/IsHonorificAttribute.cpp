@@ -10,6 +10,6 @@
  * otherwise "false".
  * @param surfaceForm Surface form of the word.
  */
-IsHonorificAttribute::IsHonorificAttribute(string surfaceForm) : BinaryAttribute(Word::isHonorific(move(surfaceForm))) {
+IsHonorificAttribute::IsHonorificAttribute(const string& surfaceForm) : BinaryAttribute(Word::isHonorific(surfaceForm)) {
 
 }

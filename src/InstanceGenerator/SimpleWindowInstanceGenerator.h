@@ -10,9 +10,9 @@
 
 class SimpleWindowInstanceGenerator : public InstanceGenerator{
 protected:
-    virtual void addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex) = 0;
-    virtual void addAttributesForEmptyWords(Instance* current, string emptyWord) = 0;
-    void addAttributes(Instance* current, Sentence* sentence, int wordIndex);
+    virtual void addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex) const = 0;
+    virtual void addAttributesForEmptyWords(Instance* current, const string& emptyWord) const = 0;
+    void addAttributes(Instance* current, Sentence* sentence, int wordIndex) const;
 };
 
 

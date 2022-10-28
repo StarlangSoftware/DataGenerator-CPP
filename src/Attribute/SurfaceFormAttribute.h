@@ -10,7 +10,7 @@
 
 class SurfaceFormAttribute : public DiscreteAttribute{
 public:
-    explicit SurfaceFormAttribute(string surfaceForm);
+    explicit SurfaceFormAttribute(const string& surfaceForm);
 };
 
 

@@ -9,6 +9,6 @@
  * the attribute will be "true", otherwise "false".
  * @param parse Morphological parse of the word.
  */
-LastIGContainsTagInstrumentalAttribute::LastIGContainsTagInstrumentalAttribute(MorphologicalParse parse) : LastIGContainsTagAttribute(move(parse), MorphologicalTag::INSTRUMENTAL){
+LastIGContainsTagInstrumentalAttribute::LastIGContainsTagInstrumentalAttribute(const MorphologicalParse& parse) : LastIGContainsTagAttribute(parse, MorphologicalTag::INSTRUMENTAL){
 
 }

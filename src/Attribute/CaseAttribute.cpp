@@ -9,5 +9,5 @@
  * attribute will have that case value. Otherwise the attribute will have the value null.
  * @param parse Morphological parse of the word.
  */
-CaseAttribute::CaseAttribute(MorphologicalParse parse) : DiscreteAttribute(parse.lastIGContainsCase()){
+CaseAttribute::CaseAttribute(const MorphologicalParse& parse) : DiscreteAttribute(parse.lastIGContainsCase()){
 }

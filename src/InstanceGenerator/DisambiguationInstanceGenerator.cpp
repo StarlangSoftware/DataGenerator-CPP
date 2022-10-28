@@ -12,7 +12,7 @@
  * @param wordIndex The index of the word in the sentence.
  * @return Classification instance.
  */
-Instance *DisambiguationInstanceGenerator::generateInstanceFromSentence(Sentence* sentence, int wordIndex) {
+Instance *DisambiguationInstanceGenerator::generateInstanceFromSentence(Sentence* sentence, int wordIndex) const{
     Instance* current;
     AnnotatedWord* word;
     word = (AnnotatedWord*) sentence->getWord(wordIndex);

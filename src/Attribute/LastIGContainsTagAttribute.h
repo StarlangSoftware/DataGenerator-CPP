@@ -12,7 +12,7 @@
 
 class LastIGContainsTagAttribute : public BinaryAttribute{
 public:
-    LastIGContainsTagAttribute(MorphologicalParse parse, MorphologicalTag tag);
+    LastIGContainsTagAttribute(const MorphologicalParse& parse, MorphologicalTag tag);
 };
 
 

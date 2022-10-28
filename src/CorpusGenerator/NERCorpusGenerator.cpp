@@ -26,7 +26,7 @@ NERCorpusGenerator::~NERCorpusGenerator() {
  *
  * @return Created corpus.
  */
-NERCorpus *NERCorpusGenerator::generate() {
+NERCorpus *NERCorpusGenerator::generate() const{
     ParseTreeDrawable* parseTree;
     Sentence* sentence;
     auto* corpus = new NERCorpus();

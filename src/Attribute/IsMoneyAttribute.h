@@ -10,7 +10,7 @@
 
 class IsMoneyAttribute : public BinaryAttribute{
 public:
-    explicit IsMoneyAttribute(string surfaceForm);
+    explicit IsMoneyAttribute(const string& surfaceForm);
 };
 
 

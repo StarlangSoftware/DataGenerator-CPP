@@ -9,5 +9,5 @@
  * have the value "true", otherwise "false".
  * @param surfaceForm Surface form of the word.
  */
-IsPersonGazetteer::IsPersonGazetteer(string surfaceForm) : BinaryAttribute(gazetteer.contains(move(surfaceForm))) {
+IsPersonGazetteer::IsPersonGazetteer(const string& surfaceForm) : BinaryAttribute(gazetteer.contains(surfaceForm)) {
 }

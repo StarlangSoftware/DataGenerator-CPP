@@ -44,7 +44,7 @@ FeaturedShallowParseInstanceGenerator::FeaturedShallowParseInstanceGenerator(int
  * @param sentence Input sentence.
  * @param wordIndex The index of the word in the sentence.
  */
-void FeaturedShallowParseInstanceGenerator::addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex) {
+void FeaturedShallowParseInstanceGenerator::addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex) const{
     MorphologicalParse* parse;
     AnnotatedWord* word;
     word = (AnnotatedWord*) sentence->getWord(wordIndex);
@@ -87,7 +87,7 @@ void FeaturedShallowParseInstanceGenerator::addAttributesForWords(Instance* curr
  * @param current Current classification instance
  * @param emptyWord String form to place for empty words.
  */
-void FeaturedShallowParseInstanceGenerator::addAttributesForEmptyWords(Instance* current, string emptyWord) {
+void FeaturedShallowParseInstanceGenerator::addAttributesForEmptyWords(Instance* current, const string& emptyWord) const{
     current->addAttribute(new BinaryAttribute(false));
     current->addAttribute(new BinaryAttribute(false));
     current->addAttribute(new BinaryAttribute(false));

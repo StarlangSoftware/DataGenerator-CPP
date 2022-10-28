@@ -10,7 +10,7 @@
  * the value "true", otherwise "false".
  * @param surfaceForm Surface form of the word.
  */
-IsCapitalAttribute::IsCapitalAttribute(string surfaceForm) : BinaryAttribute(isUpper(surfaceForm)) {
+IsCapitalAttribute::IsCapitalAttribute(const string& surfaceForm) : BinaryAttribute(isUpper(surfaceForm)) {
 }
 
 bool IsCapitalAttribute::isUpper(const string& surface) {

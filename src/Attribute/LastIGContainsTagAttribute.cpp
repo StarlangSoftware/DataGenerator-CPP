@@ -10,5 +10,5 @@
  * @param parse Morphological parse of the word.
  * @param tag Tag that is checked in the last inflectional group.
  */
-LastIGContainsTagAttribute::LastIGContainsTagAttribute(MorphologicalParse parse, MorphologicalTag tag) : BinaryAttribute(parse.lastIGContainsTag(tag)){
+LastIGContainsTagAttribute::LastIGContainsTagAttribute(const MorphologicalParse& parse, MorphologicalTag tag) : BinaryAttribute(parse.lastIGContainsTag(tag)){
 }

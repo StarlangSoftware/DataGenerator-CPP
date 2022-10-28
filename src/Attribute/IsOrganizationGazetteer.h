@@ -12,7 +12,7 @@
 class IsOrganizationGazetteer : public BinaryAttribute{
 public:
     static Gazetteer gazetteer;
-    explicit IsOrganizationGazetteer(string surfaceForm);
+    explicit IsOrganizationGazetteer(const string& surfaceForm);
 };
 
 Gazetteer IsOrganizationGazetteer::gazetteer = Gazetteer("ORGANIZATION", "gazetteer-organization.txt");

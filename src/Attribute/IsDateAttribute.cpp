@@ -9,5 +9,5 @@
  * tag DATE), the attribute will have the value "true", otherwise "false".
  * @param parse Morphological parse of the word.
  */
-IsDateAttribute::IsDateAttribute(MorphologicalParse parse) : BinaryAttribute(parse.isDate()){
+IsDateAttribute::IsDateAttribute(const MorphologicalParse& parse) : BinaryAttribute(parse.isDate()){
 }

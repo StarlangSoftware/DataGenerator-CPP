@@ -9,5 +9,5 @@
  * the value "true", otherwise "false".
  * @param parse Morphological parse of the word.
  */
-IsAuxiliaryVerbAttribute::IsAuxiliaryVerbAttribute(MorphologicalParse parse) : BinaryAttribute(parse.isAuxiliary() && parse.isVerb()){
+IsAuxiliaryVerbAttribute::IsAuxiliaryVerbAttribute(const MorphologicalParse& parse) : BinaryAttribute(parse.isAuxiliary() && parse.isVerb()){
 }

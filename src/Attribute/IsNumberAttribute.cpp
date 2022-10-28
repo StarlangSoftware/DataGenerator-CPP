@@ -9,5 +9,5 @@
  * tag REAL or CARDINAL), the attribute will have the value "true", otherwise "false".
  * @param parse Morphological parse of the word.
  */
-IsNumberAttribute::IsNumberAttribute(MorphologicalParse parse) : BinaryAttribute(parse.isNumber()){
+IsNumberAttribute::IsNumberAttribute(const MorphologicalParse& parse) : BinaryAttribute(parse.isNumber()){
 }

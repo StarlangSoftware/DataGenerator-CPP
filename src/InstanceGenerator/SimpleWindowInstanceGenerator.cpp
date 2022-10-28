@@ -14,7 +14,7 @@
  * @param sentence Input sentence.
  * @param wordIndex The index of the word in the sentence.
  */
-void SimpleWindowInstanceGenerator::addAttributes(Instance *current, Sentence *sentence, int wordIndex) {
+void SimpleWindowInstanceGenerator::addAttributes(Instance *current, Sentence *sentence, int wordIndex) const{
     for (int i = 0; i < windowSize; i++){
         if (wordIndex - windowSize + i >= 0){
             addAttributesForWords(current, sentence, wordIndex - windowSize + i);

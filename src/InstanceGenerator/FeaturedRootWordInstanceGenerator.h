@@ -13,8 +13,8 @@ public:
     explicit FeaturedRootWordInstanceGenerator(int windowSize);
 
 protected:
-    void addAttributesForPreviousWords(Instance* current, Sentence* sentence, int wordIndex);
-    void addAttributesForEmptyWords(Instance* current, string emptyWord);
+    void addAttributesForPreviousWords(Instance* current, Sentence* sentence, int wordIndex) const override;
+    void addAttributesForEmptyWords(Instance* current, const string& emptyWord) const override;
 };
 
 

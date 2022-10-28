@@ -10,7 +10,7 @@
 
 class LastIGContainsTagAccusativeAttribute : public LastIGContainsTagAttribute{
 public:
-    explicit LastIGContainsTagAccusativeAttribute(MorphologicalParse parse);
+    explicit LastIGContainsTagAccusativeAttribute(const MorphologicalParse& parse);
 };
 
 

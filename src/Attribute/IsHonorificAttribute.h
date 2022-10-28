@@ -10,7 +10,7 @@
 
 class IsHonorificAttribute : public BinaryAttribute{
 public:
-    explicit IsHonorificAttribute(string surfaceForm);
+    explicit IsHonorificAttribute(const string& surfaceForm);
 };
 
 

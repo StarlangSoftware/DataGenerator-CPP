@@ -25,7 +25,7 @@ FeaturedDisambiguationInstanceGenerator::FeaturedDisambiguationInstanceGenerator
  * @param wordIndex The index of the word in the sentence.
  */
 void FeaturedDisambiguationInstanceGenerator::addAttributesForPreviousWords(Instance* current, Sentence* sentence,
-                                                                            int wordIndex) {
+                                                                            int wordIndex) const{
     MorphologicalParse* parse;
     AnnotatedWord* word;
     word = (AnnotatedWord*) sentence->getWord(wordIndex);
@@ -41,7 +41,7 @@ void FeaturedDisambiguationInstanceGenerator::addAttributesForPreviousWords(Inst
  * @param current Current classification instance
  * @param emptyWord String form to place for empty words.
  */
-void FeaturedDisambiguationInstanceGenerator::addAttributesForEmptyWords(Instance* current, string emptyWord) {
+void FeaturedDisambiguationInstanceGenerator::addAttributesForEmptyWords(Instance* current, const string& emptyWord) const{
     current->addAttribute(new DiscreteAttribute("NULL"));
     current->addAttribute(new BinaryAttribute(false));
 }

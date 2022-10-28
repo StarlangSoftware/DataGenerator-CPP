@@ -11,7 +11,7 @@
 
 class RootFormAttribute : public DiscreteAttribute{
 public:
-    explicit RootFormAttribute(MorphologicalParse parse);
+    explicit RootFormAttribute(const MorphologicalParse& parse);
 };
 
 

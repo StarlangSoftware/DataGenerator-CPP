@@ -44,7 +44,7 @@ FeaturedNerInstanceGenerator::FeaturedNerInstanceGenerator(int windowSize) {
  * @param sentence Input sentence.
  * @param wordIndex The index of the word in the sentence.
  */
-void FeaturedNerInstanceGenerator::addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex) {
+void FeaturedNerInstanceGenerator::addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex) const{
     MorphologicalParse* parse;
     AnnotatedWord* word;
     word = (AnnotatedWord*) sentence->getWord(wordIndex);
@@ -87,7 +87,7 @@ void FeaturedNerInstanceGenerator::addAttributesForWords(Instance* current, Sent
  * @param current Current classification instance
  * @param emptyWord String form to place for empty words.
  */
-void FeaturedNerInstanceGenerator::addAttributesForEmptyWords(Instance* current, string emptyWord) {
+void FeaturedNerInstanceGenerator::addAttributesForEmptyWords(Instance* current, const string& emptyWord) const{
     current->addAttribute(new BinaryAttribute(false));
     current->addAttribute(new BinaryAttribute(false));
     current->addAttribute(new BinaryAttribute(false));

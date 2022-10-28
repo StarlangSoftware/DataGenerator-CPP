@@ -11,7 +11,7 @@
 
 class LastIGContainsPossessiveAttribute : public BinaryAttribute{
 public:
-    explicit LastIGContainsPossessiveAttribute(MorphologicalParse parse);
+    explicit LastIGContainsPossessiveAttribute(const MorphologicalParse& parse);
 };
 
 

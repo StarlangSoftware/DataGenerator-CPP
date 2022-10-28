@@ -9,5 +9,5 @@
  * tag FRACTION), the attribute will have the value "true", otherwise "false".
  * @param parse Morphological parse of the word.
  */
-IsFractionAttribute::IsFractionAttribute(MorphologicalParse parse) : BinaryAttribute(parse.isFraction()){
+IsFractionAttribute::IsFractionAttribute(const MorphologicalParse& parse) : BinaryAttribute(parse.isFraction()){
 }
