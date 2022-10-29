@@ -23,8 +23,8 @@ TEST_CASE("AnnotatedDataSetGeneratorTest-testSemanticGenerate") {
     WordNet turkish = WordNet();
     AnnotatedDataSetGenerator annotatedDataSetGenerator = AnnotatedDataSetGenerator("../sentences", new FeaturedSemanticInstanceGenerator(fsmMorphologicalAnalyzer, turkish, 1));
     DataSet dataSet = annotatedDataSetGenerator.generate();
-    REQUIRE(101 == dataSet.sampleSize());
-    REQUIRE(71 == dataSet.classCount());
+    REQUIRE(100 == dataSet.sampleSize());
+    REQUIRE(70 == dataSet.classCount());
     REQUIRE(66 == dataSet.attributeCount());
 }
 
