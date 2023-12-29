@@ -11,7 +11,6 @@
  * @param sentence Input sentence.
  * @param wordIndex The index of the word in the sentence.
  * @return Classification instance.
- * @throws InstanceNotGenerated
  */
 Instance *ShallowParseInstanceGenerator::generateInstanceFromSentence(Sentence *sentence, int wordIndex) const{
     Instance* current;

@@ -15,6 +15,6 @@ public:
     explicit IsLocationGazetteer(const string& surfaceForm);
 };
 
-Gazetteer IsLocationGazetteer::gazetteer = Gazetteer("LOCATION", "gazetteer-person.txt");
+Gazetteer IsLocationGazetteer::gazetteer = Gazetteer("LOCATION", "gazetteer-location.txt");
 
 #endif //DATAGENERATOR_ISLOCATIONGAZETTEER_H
