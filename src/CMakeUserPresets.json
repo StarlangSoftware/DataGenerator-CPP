@@ -1,0 +1,9 @@
+{
+    "version": 4,
+    "vendor": {
+        "conan": {}
+    },
+    "include": [
+        "/Users/olcay/Dropbox/nlptoolkit-repositories-cpp/DataGenerator/cmake-build-debug/conan/build/Debug/generators/CMakePresets.json"
+    ]
+}
