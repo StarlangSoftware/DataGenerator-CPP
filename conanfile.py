@@ -8,8 +8,7 @@ from conan.tools.files import copy
 class DataGeneratorConan(ConanFile):
     name = "data_generator"
     version = "1.0.0"
-    requires = ["morphological_disambiguation/1.0.0",
-                "classification/1.0.0",
+    requires = ["classification/1.0.0",
                 "named_entity_recognition/1.0.0",
                 "morphological_analysis/1.0.0",
                 "dictionary/1.0.0",
