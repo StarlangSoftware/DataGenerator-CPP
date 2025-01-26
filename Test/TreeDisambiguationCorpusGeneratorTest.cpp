@@ -6,7 +6,7 @@
 #include "../src/CorpusGenerator/TreeDisambiguationCorpusGenerator.h"
 
 TEST_CASE("TreeDisambiguationCorpusGeneratorTest-testGenerate") {
-    TreeDisambiguationCorpusGenerator treeDisambiguationCorpusGenerator = TreeDisambiguationCorpusGenerator("../trees");
+    TreeDisambiguationCorpusGenerator treeDisambiguationCorpusGenerator = TreeDisambiguationCorpusGenerator("trees");
     DisambiguationCorpus* disambiguationCorpus = treeDisambiguationCorpusGenerator.generate();
     REQUIRE(10 == disambiguationCorpus->sentenceCount());
     REQUIRE(88 == disambiguationCorpus->numberOfWords());

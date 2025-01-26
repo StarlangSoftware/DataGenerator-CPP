@@ -7,7 +7,7 @@
 #include "../src/InstanceGenerator/FeaturedNerInstanceGenerator.h"
 
 TEST_CASE("NerDataSetGeneratorTest-testGenerate") {
-    NerDataSetGenerator nerDataSetGenerator = NerDataSetGenerator("../trees", new FeaturedNerInstanceGenerator(1));
+    NerDataSetGenerator nerDataSetGenerator = NerDataSetGenerator("trees", new FeaturedNerInstanceGenerator(1));
     DataSet dataSet = nerDataSetGenerator.generate();
     REQUIRE(88 == dataSet.sampleSize());
     REQUIRE(3 == dataSet.classCount());
