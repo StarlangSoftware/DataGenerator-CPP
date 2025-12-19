@@ -9,9 +9,7 @@
  * included, includepunctuation, and an instanceGenerator. The constructor loads the treebank from the given directory
  * including the given files having the given pattern. If punctuations are not included, they are removed from
  * the data.
- * @param directory Directory where the treebank files reside.
- * @param pattern Pattern of the tree files to be included in the treebank. Use "." for all files.
- * @param includePunctuation If true, punctuation symbols are also included in the dataset, false otherwise.
+ * @param folder Directory where the treebank files reside.
  * @param instanceGenerator The instance generator used to generate the dataset.
  */
 DataSetGenerator::DataSetGenerator(const string &folder, InstanceGenerator *instanceGenerator) {
@@ -21,10 +19,10 @@ DataSetGenerator::DataSetGenerator(const string &folder, InstanceGenerator *inst
 
 /**
  * Mutator for the instanceGenerator attribute.
- * @param instanceGenerator Input instanceGenerator
+ * @param _instanceGenerator Input instanceGenerator
  */
-void DataSetGenerator::setInstanceGenerator(InstanceGenerator *instanceGenerator) {
-    this->instanceGenerator = instanceGenerator;
+void DataSetGenerator::setInstanceGenerator(InstanceGenerator *_instanceGenerator) {
+    this->instanceGenerator = _instanceGenerator;
 }
 
 /**
@@ -33,7 +31,7 @@ void DataSetGenerator::setInstanceGenerator(InstanceGenerator *instanceGenerator
  * @param parseTree Parsetree for which a set of instances will be created
  * @return An array of instances.
  */
-vector<Instance *> DataSetGenerator::generateInstanceListFromTree(ParseTreeDrawable *parseTree) const{
+vector<Instance *> DataSetGenerator::generateInstanceListFromTree(const ParseTreeDrawable *parseTree) const{
     vector<Instance*> instanceList;
     AnnotatedSentence* annotatedSentence = parseTree->generateAnnotatedSentence();
     for (int i = 0; i < annotatedSentence->wordCount(); i++){

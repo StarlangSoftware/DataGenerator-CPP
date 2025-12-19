@@ -15,7 +15,7 @@ private:
 public:
     ~NERCorpusGenerator();
     explicit NERCorpusGenerator(const string& folder);
-    NERCorpus* generate() const;
+    [[nodiscard]] NERCorpus* generate() const;
 };
 
 

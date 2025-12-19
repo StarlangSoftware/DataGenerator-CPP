@@ -10,7 +10,7 @@
 
 class FeaturedShallowParseInstanceGenerator : public ShallowParseInstanceGenerator{
 public:
-    FeaturedShallowParseInstanceGenerator(int windowSize);
+    explicit FeaturedShallowParseInstanceGenerator(int windowSize);
 
 protected:
     void addAttributesForWords(Instance* current, Sentence* sentence, int wordIndex) const override;

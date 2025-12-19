@@ -17,7 +17,7 @@ protected:
 public:
     AnnotatedDataSetGenerator(const string& folder, InstanceGenerator* instanceGenerator);
     void setInstanceGenerator(InstanceGenerator* _instanceGenerator);
-    DataSet generate() const;
+    [[nodiscard]] DataSet generate() const;
 };
 
 

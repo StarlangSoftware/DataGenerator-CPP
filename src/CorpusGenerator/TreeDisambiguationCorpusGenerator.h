@@ -14,7 +14,7 @@ private:
 public:
     ~TreeDisambiguationCorpusGenerator();
     explicit TreeDisambiguationCorpusGenerator(const string& folder);
-    DisambiguationCorpus* generate() const;
+    [[nodiscard]] DisambiguationCorpus* generate() const;
 };
 
 

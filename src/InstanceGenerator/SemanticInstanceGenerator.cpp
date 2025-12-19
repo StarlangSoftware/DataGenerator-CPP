@@ -36,6 +36,7 @@ Instance *SemanticInstanceGenerator::generateInstanceFromSentence(Sentence *sent
     }
     auto* current = new CompositeInstance(classLabel);
     vector<string> possibleClassLabels;
+    possibleClassLabels.reserve(possibleSynSets.size());
     for (const SynSet& synSet : possibleSynSets) {
         possibleClassLabels.push_back(synSet.getId());
     }

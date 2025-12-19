@@ -9,8 +9,7 @@
  * Constructor for the AnnotatedDataSetGenerator which takes input the data directory, the pattern for the
  * training files included, and an instanceGenerator. The constructor loads the sentence corpus from the given
  * directory including the given files having the given pattern.
- * @param directory Directory where the corpus files reside.
- * @param pattern Pattern of the tree files to be included in the treebank. Use "." for all files.
+ * @param folder Directory where the corpus files reside.
  * @param instanceGenerator The instance generator used to generate the dataset.
  */
 AnnotatedDataSetGenerator::AnnotatedDataSetGenerator(const string &folder,

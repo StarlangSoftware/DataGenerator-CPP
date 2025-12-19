@@ -15,7 +15,7 @@ private:
 public:
     ~SentenceDisambiguationCorpusGenerator();
     explicit SentenceDisambiguationCorpusGenerator(const string& folder);
-    DisambiguationCorpus* generate() const;
+    [[nodiscard]] DisambiguationCorpus* generate() const;
 };
 
 

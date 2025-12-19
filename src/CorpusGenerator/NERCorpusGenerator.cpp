@@ -9,8 +9,7 @@
  * included. The constructor loads the treebank from the given directory including the given files having the given
  * pattern.
  *
- * @param directory Directory where the treebank files reside.
- * @param pattern Pattern of the tree files to be included in the treebank. Use "." for all files.
+ * @param folder Directory where the treebank files reside.
  */
 NERCorpusGenerator::NERCorpusGenerator(const string &folder) {
     treeBank = new TreeBankDrawable(folder);

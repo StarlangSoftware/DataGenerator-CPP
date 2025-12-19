@@ -15,7 +15,7 @@ private:
     TreeBankDrawable* treeBank;
 protected:
     InstanceGenerator* instanceGenerator;
-    vector<Instance*> generateInstanceListFromTree(ParseTreeDrawable* parseTree) const;
+    vector<Instance*> generateInstanceListFromTree(const ParseTreeDrawable* parseTree) const;
 public:
     DataSetGenerator(const string &folder, InstanceGenerator* instanceGenerator);
     void setInstanceGenerator(InstanceGenerator* instanceGenerator);

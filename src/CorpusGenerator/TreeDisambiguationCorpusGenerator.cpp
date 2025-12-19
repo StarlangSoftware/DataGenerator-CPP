@@ -12,7 +12,6 @@
  * in the file list.
  *
  * @param folder Directory where the treebank files reside.
- * @param filelist File list.
  */
 TreeDisambiguationCorpusGenerator::TreeDisambiguationCorpusGenerator(const string &folder) {
     treeBank = new TreeBankDrawable(folder);
